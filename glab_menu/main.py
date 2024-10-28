@@ -104,7 +104,7 @@ def show_menu():
 
     try:
         wofi_result = subprocess.check_output(
-            f"python {SCRIPT_PATH} list | wofi --allow-markup --show dmenu --prompt 'GitLab Projects' --lines 10",
+            f"{SCRIPT_PATH} list | wofi --allow-markup --show dmenu --prompt 'GitLab Projects' --lines 10",
             shell=True,
         )
     except subprocess.CalledProcessError:
